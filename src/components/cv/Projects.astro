@@ -1,0 +1,25 @@
+---
+const {info_projects} =Astro.props;
+---
+
+<div class="border-t-2 border-gray-500 my-4">
+    <h2 class="my-4 font-heading font-bold tracking-widest">Proyectos Resaltantes</h2>
+    <div>
+        {info_projects.map((project)=>(
+        <div>
+            <h6 class="font-heading font-semibold flex justify-between">
+                {project.data.name_project} <span class="font-serif text-xs">{project.data.location}</span>
+            </h6>
+        </div>
+        <p class="font-serif italic text-gray-500">
+            {project.data.company_name} - {project.data.date}
+        </p>
+        <ul class="font-sans list-disc list-inside mt-2 text-sm text-gray-700">
+            {project.data.achievements.map((achievement)=>(
+                <li>{achievement}</li>
+            ))}
+        </ul>
+
+        ))}
+    </div>
+</div>

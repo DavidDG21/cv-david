@@ -1,0 +1,19 @@
+---
+const {info_certifications} = Astro.props;
+---
+
+<div class="border-t-2 border-gray-500 py-4">
+    <h2 class="font-heading font-bold tracking-widest ">Certificaciones</h2>
+    <ul class="list-disc list-inside mt-2 text-sm text-gray-700">
+        {info_certifications.certifications.map((certification) => (
+            <li class="flex flex-row justify-between mb-2">
+                <a href={certification.link_certificacition} class="flex items-center gap-2 text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
+                    <img src="/public/icons/link.svg" alt="icono de link" class="h-4 w-4 text-blue-700">
+                    <span>{certification.name_certification}</span>
+                </a>
+                <p class="italic text-gray-600">{certification.date_completion}</p>
+            </li>
+        ))}
+    </ul>
+
+</div>
