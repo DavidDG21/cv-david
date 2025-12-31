@@ -1,0 +1,19 @@
+---
+const {info_sumamary} = Astro.props;
+// console.log(info_sumamary[0].data);
+---
+
+<div class="border-t-2 pb-4 border-gray-500 ">
+    <h2 class="my-4 font-heading font-bold tracking-widest">Educación</h2>
+    <div class="">
+        {info_sumamary.map((education)=> (
+        <div>
+            <p class="flex justify-between font-heading font-semibold m-0 p-0">{education.data.university_name} <span>{education.data.start} - {education.data.end}</span></p>
+        </div>
+        <div>
+            <p class="flex justify-between italic">{education.data.professional_career} <span>{education.data.location}</span> </p>
+        </div>
+            
+        ))}
+    </div>
+</div> 

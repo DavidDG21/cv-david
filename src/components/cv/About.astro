@@ -1,0 +1,11 @@
+---
+const { info_about } = Astro.props;
+const {about} = info_about; 
+---
+
+<div class="mt-6 pt-4 border-t-2 border-gray-500">
+    <h2 class="mb-4 font-heading font-bold tracking-widest">Acerca de Mí</h2>
+    <p class="font-sans text-justify text-sm text-gray-600" >
+        {about}
+    </p>
+</div>

@@ -1,0 +1,23 @@
+---
+const {info_skills, info_languages} = Astro.props;
+---
+
+<div class="border-t-2 border-gray-500 my-6 py-4 grid  grid-cols-8 gap-4">
+    <div class="col-span-6">
+        <h2 class="font-heading font-bold tracking-widest">Habilidades</h2>
+        <ul class="font-sans list-disc list-inside mt-2 text-sm text-gray-700">
+            <li> <span class="font-bold">Lenguajes: </span> <span>{info_skills.languages}</span></li>
+            <li> <span class="font-bold">Cloud & MLOps: </span> <span>{info_skills.cloud}</span></li>
+            <li> <span class="font-bold">Data & ML: </span> <span>{info_skills.data}</span> </li>
+            <li> <span class="font-bold">Tools: </span> <span>{info_skills.tools}</span></li>
+            <li> <span class="font-bold">GenAI: </span> <span class="text-sm">{info_skills.genai}</span></li>
+        </ul>
+    </div>
+    <div class="col-span-2">
+        <h2 class="font-heading font-bold tracking-widest">Idiomas</h2>
+        <ul class=" font-sans list-disc list-inside mt-2 text-sm text-gray-700">
+            <li>{info_languages.lan_spanish}</li>
+            <li>{info_languages.lan_english}</li>  
+        </ul>
+    </div>
+</div>

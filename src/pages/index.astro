@@ -1,11 +1,67 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import CvLayout from '../layouts/CvLayout.astro';
+import CvPage from '../components/cv/CvPage.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Header from '../components/cv/Header.astro';
+import About from '../components/cv/About.astro';
+import Experience from '../components/cv/Experience.astro';
+import Education from '../components/cv/Education.astro';
+import Projects from '../components/cv/Projects.astro';
+import Skills from '../components/cv/Skills.astro';
+import Certifications from '../components/cv/Certifications.astro';
+import Volunteering from '../components/cv/Volunteering.astro';
+import Languages from '../components/cv/Languages.astro';
+
+
+// importar los datos que tenemos en nuestro markdown 
+import { getCollection} from 'astro:content';
+import { getEntry } from 'astro:content';
+// creamos las variables constantes para pasar los datos a la pagina
+const info_sumamary = await getCollection('education');
+const info_experience = await getCollection('experience');
+const info_projects = await getCollection('projects');
+
+const info_about = await getEntry('sections', 'about');
+const info_certifications = await getEntry('sections', 'certifications');
+const info_links = await getEntry('sections', 'info-link');
+const info_languages = await getEntry('sections', 'languages');
+const info_skills = await getEntry('sections', 'skills');
+const info_volunteering = await getEntry('sections', 'volunteering');
+
+// console.log("datos de voluntariado:", info_volunteering);
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<CvLayout title="CV - David" description="Mi Curriculum Vitae desarrollado con Astro.">
+ 
+	
+  <CvPage>
+	<section>
+		<Header info_links={info_links.data} />
+	</section>
+	<section>
+		<About info_about={info_about.data} />
+	</section>
+	<section>
+		<Experience info_experience={info_experience} />
+	</section>	
+  </CvPage>
+
+  <CvPage break>
+	<section>
+		<Education info_sumamary={info_sumamary} />
+	</section>	
+	<section>
+		<Projects info_projects={info_projects} />
+	</section>
+	<section>
+		<Skills info_skills={info_skills.data} info_languages={info_languages.data} />
+	</section>
+	<section>
+		<Certifications info_certifications={info_certifications.data} />
+	</section>
+	<section>
+		<Volunteering info_volunteering={info_volunteering.data} />
+	</section>
+  </CvPage>	
+
+</CvLayout>

@@ -1,0 +1,18 @@
+---
+const {info_volunteering} = Astro.props;
+console.log("datos de voluntariado en componente:", info_volunteering.volunteering);
+---
+
+<div class="border-t-2 border-gray-500 py-4">
+    <h2 class="font-heading font-bold tracking-widest">Voluntariado</h2>
+    <div>
+        {info_volunteering.volunteering.map((volunteer) => (
+            <div class="mt-2">
+                <h3 class="font-semibold">{volunteer.name_volunteering} - {volunteer.organization}</h3>
+                <p class="text-sm text-gray-600 italic my-2">{volunteer.rol} - {volunteer.date ? volunteer.date : 'Presente'}</p>
+               <p class="text-sm text-gray-600 font-sans text-justify">{volunteer.summary}</p>
+            </div>
+        ))} 
+    </div>
+    
+</div>

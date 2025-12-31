@@ -1,0 +1,41 @@
+---
+const { break: pageBreak = false } = Astro.props;
+---
+
+<div class={`cv-page ${pageBreak ? "cv-page--break" : ""}`}>
+  <slot />
+</div>
+
+<style>
+.cv-page {
+    width: 210mm;
+    min-height: 297mm;
+    background: #fff;
+
+    padding: 12mm 16mm;
+    margin-top: 14px;
+}
+
+
+
+@page{
+    size: A4;
+    margin: 0;
+}
+
+@media print{
+    .cv-page{
+        margin: 0;
+        border: none;
+
+        break-after: page;
+        page-break-after: always;
+    }
+    .cv-page--break{
+        break-before: page ;
+        page-break-before: always;
+        margin-top: 0;
+    }
+}
+
+</style>

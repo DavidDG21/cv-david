@@ -1,0 +1,21 @@
+---
+const { info_experience } = Astro.props;
+--- 
+
+<div class="mt-6 pt-4 border-t-2 border-gray-500">
+    <h2 class="mb-4 font-heading font-bold tracking-widest">Experiencia Profesional</h2>
+    <div class="space-y-4">
+        {info_experience.map((experience) => (
+            <div>
+                <h3 class="font-semibold">{experience.data.role} - <span class="font-normal italic">{experience.data.company}</span></h3>
+                <p class="text-sm text-gray-600 italic">{experience.data.start} - {experience.data.end ? experience.data.end : 'Presente'}</p>
+                <ul class="font-sans list-disc list-inside mt-2 text-sm text-gray-700">
+                    {experience.data.achievements.map((achievement) => (
+                        <li>{achievement}</li>
+                    ))}
+                </ul>
+            </div>
+        ))}
+    </div>
+
+</div>
