@@ -7,7 +7,7 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
 
   site: 'https://DavidDG21.github.io',
-  base: '/cv-astro/',
+  base: '/cv-david/',
 
   vite: {
     plugins: [tailwindcss()]

@@ -9,9 +9,7 @@ El objetivo de este proyecto es presentar mi perfil profesional, experiencia, ha
 
 Puedes ver el proyecto desplegado en GitHub Pages en el siguiente enlace:
 
-👉 **[Ver CV Web](https://TU_USUARIO.github.io/TU_REPOSITORIO/)**
-
-> *(Reemplaza el enlace con tu URL real de GitHub Pages)*
+👉 **[Ver CV Web](https://daviddg21.github.io/cv-david/)**
 
 ---
 
