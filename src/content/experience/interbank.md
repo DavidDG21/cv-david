@@ -2,8 +2,8 @@
 company: Interbank
 location: Lima, PE
 role: Machine Learning Engineer
-start: 2025-04
-end: 2025-11
+start: 2025-02
+end: 2025-12
 achievements:
       - Automatización de pipelines de inferencia de modelos de machine learning en AWS, reduciendo esfuerzo manual y riesgo operativo en despliegues recurrentes.
       - Implementación de flujos con Step Functions y servicios integrados (S3, Lambdas, orquestación de procesos de scoring y monitoreo).

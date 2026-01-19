@@ -2,8 +2,8 @@
 company: Matt Innova Solution
 location: Lima, PE
 role: Desarrollador de Software - Full Stack
-start: 2024-02
-end: 2025-03
+start: 2023-09
+end: 2024-12
 achievements:
   - Desarrollo de funcionalidades de backend en Laravel (PHP) para soluciones de e-commerce, integrando lógica de negocio y flujos de compra, proyectos alojados en AWS. 
   - Consumo e integración de APIs REST, manejo de base de datos MySQL.
